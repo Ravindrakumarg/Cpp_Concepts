@@ -1,0 +1,957 @@
+
+BaseDrived.obj:     file format pe-i386
+
+
+Disassembly of section .text:
+
+00000000 <_wmain>:
+   0:	55                   	push   %ebp
+   1:	8b ec                	mov    %esp,%ebp
+   3:	81 ec f4 00 00 00    	sub    $0xf4,%esp
+   9:	53                   	push   %ebx
+   a:	56                   	push   %esi
+   b:	57                   	push   %edi
+   c:	8d bd 0c ff ff ff    	lea    -0xf4(%ebp),%edi
+  12:	b9 3d 00 00 00       	mov    $0x3d,%ecx
+  17:	b8 cc cc cc cc       	mov    $0xcccccccc,%eax
+  1c:	f3 ab                	rep stos %eax,%es:(%edi)
+  1e:	8d 45 dc             	lea    -0x24(%ebp),%eax
+  21:	89 45 f8             	mov    %eax,-0x8(%ebp)
+  24:	8b 45 f8             	mov    -0x8(%ebp),%eax
+  27:	c7 00 f4 01 00 00    	movl   $0x1f4,(%eax)
+  2d:	8b 45 f8             	mov    -0x8(%ebp),%eax
+  30:	c7 40 04 bc 02 00 00 	movl   $0x2bc,0x4(%eax)
+  37:	8b 4d f8             	mov    -0x8(%ebp),%ecx
+  3a:	e8 00 00 00 00       	call   3f <_wmain+0x3f>
+  3f:	8d 45 ec             	lea    -0x14(%ebp),%eax
+  42:	89 45 d0             	mov    %eax,-0x30(%ebp)
+  45:	8b 4d d0             	mov    -0x30(%ebp),%ecx
+  48:	e8 00 00 00 00       	call   4d <_wmain+0x4d>
+  4d:	33 c0                	xor    %eax,%eax
+  4f:	52                   	push   %edx
+  50:	8b cd                	mov    %ebp,%ecx
+  52:	50                   	push   %eax
+  53:	8d 15 00 00 00 00    	lea    0x0,%edx
+  59:	e8 00 00 00 00       	call   5e <_wmain+0x5e>
+  5e:	58                   	pop    %eax
+  5f:	5a                   	pop    %edx
+  60:	5f                   	pop    %edi
+  61:	5e                   	pop    %esi
+  62:	5b                   	pop    %ebx
+  63:	81 c4 f4 00 00 00    	add    $0xf4,%esp
+  69:	3b ec                	cmp    %esp,%ebp
+  6b:	e8 00 00 00 00       	call   70 <_wmain+0x70>
+  70:	8b e5                	mov    %ebp,%esp
+  72:	5d                   	pop    %ebp
+  73:	c3                   	ret    
+
+00000074 <$LN6>:
+  74:	02 00                	add    (%eax),%al
+  76:	00 00                	add    %al,(%eax)
+  78:	00 00                	add    %al,(%eax)
+	...
+
+0000007c <$LN5>:
+  7c:	ec                   	in     (%dx),%al
+  7d:	ff                   	(bad)  
+  7e:	ff                   	(bad)  
+  7f:	ff 04 00             	incl   (%eax,%eax,1)
+  82:	00 00                	add    %al,(%eax)
+  84:	00 00                	add    %al,(%eax)
+  86:	00 00                	add    %al,(%eax)
+  88:	dc ff                	fdivr  %st,%st(7)
+  8a:	ff                   	(bad)  
+  8b:	ff 08                	decl   (%eax)
+  8d:	00 00                	add    %al,(%eax)
+  8f:	00 00                	add    %al,(%eax)
+  91:	00 00                	add    %al,(%eax)
+	...
+
+00000094 <$LN4>:
+  94:	64                   	fs
+	...
+
+00000096 <$LN3>:
+  96:	62 00                	bound  %eax,(%eax)
+
+Disassembly of section .text:
+
+00000000 <?show@Base@@QAEXXZ>:
+   0:	55                   	push   %ebp
+   1:	8b ec                	mov    %esp,%ebp
+   3:	81 ec cc 00 00 00    	sub    $0xcc,%esp
+   9:	53                   	push   %ebx
+   a:	56                   	push   %esi
+   b:	57                   	push   %edi
+   c:	51                   	push   %ecx
+   d:	8d bd 34 ff ff ff    	lea    -0xcc(%ebp),%edi
+  13:	b9 33 00 00 00       	mov    $0x33,%ecx
+  18:	b8 cc cc cc cc       	mov    $0xcccccccc,%eax
+  1d:	f3 ab                	rep stos %eax,%es:(%edi)
+  1f:	59                   	pop    %ecx
+  20:	89 4d f8             	mov    %ecx,-0x8(%ebp)
+  23:	8b f4                	mov    %esp,%esi
+  25:	a1 00 00 00 00       	mov    0x0,%eax
+  2a:	50                   	push   %eax
+  2b:	8b fc                	mov    %esp,%edi
+  2d:	8b 4d f8             	mov    -0x8(%ebp),%ecx
+  30:	8b 11                	mov    (%ecx),%edx
+  32:	52                   	push   %edx
+  33:	68 00 00 00 00       	push   $0x0
+  38:	a1 00 00 00 00       	mov    0x0,%eax
+  3d:	50                   	push   %eax
+  3e:	e8 00 00 00 00       	call   43 <?show@Base@@QAEXXZ+0x43>
+  43:	83 c4 08             	add    $0x8,%esp
+  46:	8b c8                	mov    %eax,%ecx
+  48:	ff 15 00 00 00 00    	call   *0x0
+  4e:	3b fc                	cmp    %esp,%edi
+  50:	e8 00 00 00 00       	call   55 <?show@Base@@QAEXXZ+0x55>
+  55:	8b c8                	mov    %eax,%ecx
+  57:	ff 15 00 00 00 00    	call   *0x0
+  5d:	3b f4                	cmp    %esp,%esi
+  5f:	e8 00 00 00 00       	call   64 <?show@Base@@QAEXXZ+0x64>
+  64:	5f                   	pop    %edi
+  65:	5e                   	pop    %esi
+  66:	5b                   	pop    %ebx
+  67:	81 c4 cc 00 00 00    	add    $0xcc,%esp
+  6d:	3b ec                	cmp    %esp,%ebp
+  6f:	e8 00 00 00 00       	call   74 <?show@Base@@QAEXXZ+0x74>
+  74:	8b e5                	mov    %ebp,%esp
+  76:	5d                   	pop    %ebp
+  77:	c3                   	ret    
+
+Disassembly of section .text:
+
+00000000 <?show@Drived@@QAEXXZ>:
+   0:	55                   	push   %ebp
+   1:	8b ec                	mov    %esp,%ebp
+   3:	81 ec cc 00 00 00    	sub    $0xcc,%esp
+   9:	53                   	push   %ebx
+   a:	56                   	push   %esi
+   b:	57                   	push   %edi
+   c:	51                   	push   %ecx
+   d:	8d bd 34 ff ff ff    	lea    -0xcc(%ebp),%edi
+  13:	b9 33 00 00 00       	mov    $0x33,%ecx
+  18:	b8 cc cc cc cc       	mov    $0xcccccccc,%eax
+  1d:	f3 ab                	rep stos %eax,%es:(%edi)
+  1f:	59                   	pop    %ecx
+  20:	89 4d f8             	mov    %ecx,-0x8(%ebp)
+  23:	8b f4                	mov    %esp,%esi
+  25:	a1 00 00 00 00       	mov    0x0,%eax
+  2a:	50                   	push   %eax
+  2b:	8b fc                	mov    %esp,%edi
+  2d:	8b 4d f8             	mov    -0x8(%ebp),%ecx
+  30:	8b 51 04             	mov    0x4(%ecx),%edx
+  33:	52                   	push   %edx
+  34:	68 00 00 00 00       	push   $0x0
+  39:	68 00 00 00 00       	push   $0x0
+  3e:	8b dc                	mov    %esp,%ebx
+  40:	8b 45 f8             	mov    -0x8(%ebp),%eax
+  43:	8b 08                	mov    (%eax),%ecx
+  45:	51                   	push   %ecx
+  46:	68 00 00 00 00       	push   $0x0
+  4b:	8b 15 00 00 00 00    	mov    0x0,%edx
+  51:	52                   	push   %edx
+  52:	e8 00 00 00 00       	call   57 <?show@Drived@@QAEXXZ+0x57>
+  57:	83 c4 08             	add    $0x8,%esp
+  5a:	8b c8                	mov    %eax,%ecx
+  5c:	ff 15 00 00 00 00    	call   *0x0
+  62:	3b dc                	cmp    %esp,%ebx
+  64:	e8 00 00 00 00       	call   69 <?show@Drived@@QAEXXZ+0x69>
+  69:	50                   	push   %eax
+  6a:	e8 00 00 00 00       	call   6f <?show@Drived@@QAEXXZ+0x6f>
+  6f:	83 c4 08             	add    $0x8,%esp
+  72:	50                   	push   %eax
+  73:	e8 00 00 00 00       	call   78 <?show@Drived@@QAEXXZ+0x78>
+  78:	83 c4 08             	add    $0x8,%esp
+  7b:	8b c8                	mov    %eax,%ecx
+  7d:	ff 15 00 00 00 00    	call   *0x0
+  83:	3b fc                	cmp    %esp,%edi
+  85:	e8 00 00 00 00       	call   8a <?show@Drived@@QAEXXZ+0x8a>
+  8a:	8b c8                	mov    %eax,%ecx
+  8c:	ff 15 00 00 00 00    	call   *0x0
+  92:	3b f4                	cmp    %esp,%esi
+  94:	e8 00 00 00 00       	call   99 <?show@Drived@@QAEXXZ+0x99>
+  99:	5f                   	pop    %edi
+  9a:	5e                   	pop    %esi
+  9b:	5b                   	pop    %ebx
+  9c:	81 c4 cc 00 00 00    	add    $0xcc,%esp
+  a2:	3b ec                	cmp    %esp,%ebp
+  a4:	e8 00 00 00 00       	call   a9 <?show@Drived@@QAEXXZ+0xa9>
+  a9:	8b e5                	mov    %ebp,%esp
+  ab:	5d                   	pop    %ebp
+  ac:	c3                   	ret    
+
+Disassembly of section .text:
+
+00000000 <??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z>:
+   0:	55                   	push   %ebp
+   1:	8b ec                	mov    %esp,%ebp
+   3:	6a ff                	push   $0xffffffff
+   5:	68 00 00 00 00       	push   $0x0
+   a:	64 a1 00 00 00 00    	mov    %fs:0x0,%eax
+  10:	50                   	push   %eax
+  11:	51                   	push   %ecx
+  12:	81 ec 50 01 00 00    	sub    $0x150,%esp
+  18:	53                   	push   %ebx
+  19:	56                   	push   %esi
+  1a:	57                   	push   %edi
+  1b:	8d bd a0 fe ff ff    	lea    -0x160(%ebp),%edi
+  21:	b9 54 00 00 00       	mov    $0x54,%ecx
+  26:	b8 cc cc cc cc       	mov    $0xcccccccc,%eax
+  2b:	f3 ab                	rep stos %eax,%es:(%edi)
+  2d:	a1 00 00 00 00       	mov    0x0,%eax
+  32:	33 c5                	xor    %ebp,%eax
+  34:	50                   	push   %eax
+  35:	8d 45 f4             	lea    -0xc(%ebp),%eax
+  38:	64 a3 00 00 00 00    	mov    %eax,%fs:0x0
+  3e:	89 65 f0             	mov    %esp,-0x10(%ebp)
+  41:	c7 45 e8 00 00 00 00 	movl   $0x0,-0x18(%ebp)
+  48:	8b 45 0c             	mov    0xc(%ebp),%eax
+  4b:	50                   	push   %eax
+  4c:	e8 00 00 00 00       	call   51 <??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z+0x51>
+  51:	83 c4 04             	add    $0x4,%esp
+  54:	33 c9                	xor    %ecx,%ecx
+  56:	89 45 d8             	mov    %eax,-0x28(%ebp)
+  59:	89 4d dc             	mov    %ecx,-0x24(%ebp)
+  5c:	8b 45 08             	mov    0x8(%ebp),%eax
+  5f:	8b 08                	mov    (%eax),%ecx
+  61:	8b 55 08             	mov    0x8(%ebp),%edx
+  64:	03 51 04             	add    0x4(%ecx),%edx
+  67:	8b f4                	mov    %esp,%esi
+  69:	8b ca                	mov    %edx,%ecx
+  6b:	ff 15 00 00 00 00    	call   *0x0
+  71:	3b f4                	cmp    %esp,%esi
+  73:	e8 00 00 00 00       	call   78 <??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z+0x78>
+  78:	89 85 b0 fe ff ff    	mov    %eax,-0x150(%ebp)
+  7e:	89 95 b4 fe ff ff    	mov    %edx,-0x14c(%ebp)
+  84:	83 bd b4 fe ff ff 00 	cmpl   $0x0,-0x14c(%ebp)
+  8b:	7c 79                	jl     106 <??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z+0x106>
+  8d:	7f 09                	jg     98 <??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z+0x98>
+  8f:	83 bd b0 fe ff ff 00 	cmpl   $0x0,-0x150(%ebp)
+  96:	76 6e                	jbe    106 <??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z+0x106>
+  98:	8b 45 08             	mov    0x8(%ebp),%eax
+  9b:	8b 08                	mov    (%eax),%ecx
+  9d:	8b 55 08             	mov    0x8(%ebp),%edx
+  a0:	03 51 04             	add    0x4(%ecx),%edx
+  a3:	8b f4                	mov    %esp,%esi
+  a5:	8b ca                	mov    %edx,%ecx
+  a7:	ff 15 00 00 00 00    	call   *0x0
+  ad:	3b f4                	cmp    %esp,%esi
+  af:	e8 00 00 00 00       	call   b4 <??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z+0xb4>
+  b4:	89 85 a8 fe ff ff    	mov    %eax,-0x158(%ebp)
+  ba:	89 95 ac fe ff ff    	mov    %edx,-0x154(%ebp)
+  c0:	8b 85 ac fe ff ff    	mov    -0x154(%ebp),%eax
+  c6:	3b 45 dc             	cmp    -0x24(%ebp),%eax
+  c9:	7c 3b                	jl     106 <??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z+0x106>
+  cb:	7f 0b                	jg     d8 <??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z+0xd8>
+  cd:	8b 8d a8 fe ff ff    	mov    -0x158(%ebp),%ecx
+  d3:	3b 4d d8             	cmp    -0x28(%ebp),%ecx
+  d6:	76 2e                	jbe    106 <??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z+0x106>
+  d8:	8b 55 08             	mov    0x8(%ebp),%edx
+  db:	8b 02                	mov    (%edx),%eax
+  dd:	8b 4d 08             	mov    0x8(%ebp),%ecx
+  e0:	03 48 04             	add    0x4(%eax),%ecx
+  e3:	8b f4                	mov    %esp,%esi
+  e5:	ff 15 00 00 00 00    	call   *0x0
+  eb:	3b f4                	cmp    %esp,%esi
+  ed:	e8 00 00 00 00       	call   f2 <??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z+0xf2>
+  f2:	2b 45 d8             	sub    -0x28(%ebp),%eax
+  f5:	1b 55 dc             	sbb    -0x24(%ebp),%edx
+  f8:	89 85 a0 fe ff ff    	mov    %eax,-0x160(%ebp)
+  fe:	89 95 a4 fe ff ff    	mov    %edx,-0x15c(%ebp)
+ 104:	eb 14                	jmp    11a <??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z+0x11a>
+ 106:	c7 85 a0 fe ff ff 00 	movl   $0x0,-0x160(%ebp)
+ 10d:	00 00 00 
+ 110:	c7 85 a4 fe ff ff 00 	movl   $0x0,-0x15c(%ebp)
+ 117:	00 00 00 
+ 11a:	8b 8d a0 fe ff ff    	mov    -0x160(%ebp),%ecx
+ 120:	89 4d c8             	mov    %ecx,-0x38(%ebp)
+ 123:	8b 95 a4 fe ff ff    	mov    -0x15c(%ebp),%edx
+ 129:	89 55 cc             	mov    %edx,-0x34(%ebp)
+ 12c:	8b 45 08             	mov    0x8(%ebp),%eax
+ 12f:	50                   	push   %eax
+ 130:	8d 4d b8             	lea    -0x48(%ebp),%ecx
+ 133:	e8 00 00 00 00       	call   138 <??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z+0x138>
+ 138:	c7 45 fc 00 00 00 00 	movl   $0x0,-0x4(%ebp)
+ 13f:	8d 4d b8             	lea    -0x48(%ebp),%ecx
+ 142:	e8 00 00 00 00       	call   147 <??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z+0x147>
+ 147:	83 f8 ff             	cmp    $0xffffffff,%eax
+ 14a:	75 0e                	jne    15a <??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z+0x15a>
+ 14c:	8b 45 e8             	mov    -0x18(%ebp),%eax
+ 14f:	83 c8 04             	or     $0x4,%eax
+ 152:	89 45 e8             	mov    %eax,-0x18(%ebp)
+ 155:	e9 e4 02 00 00       	jmp    43e <$LN13>
+ 15a:	c6 45 fc 01          	movb   $0x1,-0x4(%ebp)
+ 15e:	8b 45 08             	mov    0x8(%ebp),%eax
+ 161:	8b 08                	mov    (%eax),%ecx
+ 163:	8b 55 08             	mov    0x8(%ebp),%edx
+ 166:	03 51 04             	add    0x4(%ecx),%edx
+ 169:	8b f4                	mov    %esp,%esi
+ 16b:	8b ca                	mov    %edx,%ecx
+ 16d:	ff 15 00 00 00 00    	call   *0x0
+ 173:	3b f4                	cmp    %esp,%esi
+ 175:	e8 00 00 00 00       	call   17a <??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z+0x17a>
+ 17a:	89 85 b4 fe ff ff    	mov    %eax,-0x14c(%ebp)
+ 180:	8b 85 b4 fe ff ff    	mov    -0x14c(%ebp),%eax
+ 186:	25 c0 01 00 00       	and    $0x1c0,%eax
+ 18b:	83 f8 40             	cmp    $0x40,%eax
+ 18e:	0f 84 eb 00 00 00    	je     27f <??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z+0x27f>
+ 194:	eb 12                	jmp    1a8 <??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z+0x1a8>
+ 196:	8b 45 c8             	mov    -0x38(%ebp),%eax
+ 199:	83 e8 01             	sub    $0x1,%eax
+ 19c:	8b 4d cc             	mov    -0x34(%ebp),%ecx
+ 19f:	83 d9 00             	sbb    $0x0,%ecx
+ 1a2:	89 45 c8             	mov    %eax,-0x38(%ebp)
+ 1a5:	89 4d cc             	mov    %ecx,-0x34(%ebp)
+ 1a8:	83 7d cc 00          	cmpl   $0x0,-0x34(%ebp)
+ 1ac:	0f 8c cd 00 00 00    	jl     27f <??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z+0x27f>
+ 1b2:	7f 0a                	jg     1be <??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z+0x1be>
+ 1b4:	83 7d c8 00          	cmpl   $0x0,-0x38(%ebp)
+ 1b8:	0f 86 c1 00 00 00    	jbe    27f <??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z+0x27f>
+ 1be:	8b 45 08             	mov    0x8(%ebp),%eax
+ 1c1:	8b 08                	mov    (%eax),%ecx
+ 1c3:	8b 55 08             	mov    0x8(%ebp),%edx
+ 1c6:	03 51 04             	add    0x4(%ecx),%edx
+ 1c9:	8b f4                	mov    %esp,%esi
+ 1cb:	8b ca                	mov    %edx,%ecx
+ 1cd:	ff 15 00 00 00 00    	call   *0x0
+ 1d3:	3b f4                	cmp    %esp,%esi
+ 1d5:	e8 00 00 00 00       	call   1da <??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z+0x1da>
+ 1da:	88 85 b7 fe ff ff    	mov    %al,-0x149(%ebp)
+ 1e0:	8b 45 08             	mov    0x8(%ebp),%eax
+ 1e3:	8b 08                	mov    (%eax),%ecx
+ 1e5:	8b 55 08             	mov    0x8(%ebp),%edx
+ 1e8:	03 51 04             	add    0x4(%ecx),%edx
+ 1eb:	8b f4                	mov    %esp,%esi
+ 1ed:	8b ca                	mov    %edx,%ecx
+ 1ef:	ff 15 00 00 00 00    	call   *0x0
+ 1f5:	3b f4                	cmp    %esp,%esi
+ 1f7:	e8 00 00 00 00       	call   1fc <??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z+0x1fc>
+ 1fc:	89 85 b0 fe ff ff    	mov    %eax,-0x150(%ebp)
+ 202:	8b f4                	mov    %esp,%esi
+ 204:	0f b6 85 b7 fe ff ff 	movzbl -0x149(%ebp),%eax
+ 20b:	50                   	push   %eax
+ 20c:	8b 8d b0 fe ff ff    	mov    -0x150(%ebp),%ecx
+ 212:	ff 15 00 00 00 00    	call   *0x0
+ 218:	3b f4                	cmp    %esp,%esi
+ 21a:	e8 00 00 00 00       	call   21f <??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z+0x21f>
+ 21f:	89 85 ac fe ff ff    	mov    %eax,-0x154(%ebp)
+ 225:	8b 8d ac fe ff ff    	mov    -0x154(%ebp),%ecx
+ 22b:	89 8d bc fe ff ff    	mov    %ecx,-0x144(%ebp)
+ 231:	e8 00 00 00 00       	call   236 <??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z+0x236>
+ 236:	89 85 a8 fe ff ff    	mov    %eax,-0x158(%ebp)
+ 23c:	8b 95 a8 fe ff ff    	mov    -0x158(%ebp),%edx
+ 242:	89 95 c8 fe ff ff    	mov    %edx,-0x138(%ebp)
+ 248:	8d 85 bc fe ff ff    	lea    -0x144(%ebp),%eax
+ 24e:	50                   	push   %eax
+ 24f:	8d 8d c8 fe ff ff    	lea    -0x138(%ebp),%ecx
+ 255:	51                   	push   %ecx
+ 256:	e8 00 00 00 00       	call   25b <??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z+0x25b>
+ 25b:	83 c4 08             	add    $0x8,%esp
+ 25e:	88 85 a7 fe ff ff    	mov    %al,-0x159(%ebp)
+ 264:	0f b6 95 a7 fe ff ff 	movzbl -0x159(%ebp),%edx
+ 26b:	85 d2                	test   %edx,%edx
+ 26d:	74 0b                	je     27a <??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z+0x27a>
+ 26f:	8b 45 e8             	mov    -0x18(%ebp),%eax
+ 272:	83 c8 04             	or     $0x4,%eax
+ 275:	89 45 e8             	mov    %eax,-0x18(%ebp)
+ 278:	eb 05                	jmp    27f <??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z+0x27f>
+ 27a:	e9 17 ff ff ff       	jmp    196 <??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z+0x196>
+ 27f:	83 7d e8 00          	cmpl   $0x0,-0x18(%ebp)
+ 283:	75 6e                	jne    2f3 <??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z+0x2f3>
+ 285:	8b 45 08             	mov    0x8(%ebp),%eax
+ 288:	8b 08                	mov    (%eax),%ecx
+ 28a:	8b 55 08             	mov    0x8(%ebp),%edx
+ 28d:	03 51 04             	add    0x4(%ecx),%edx
+ 290:	8b f4                	mov    %esp,%esi
+ 292:	8b ca                	mov    %edx,%ecx
+ 294:	ff 15 00 00 00 00    	call   *0x0
+ 29a:	3b f4                	cmp    %esp,%esi
+ 29c:	e8 00 00 00 00       	call   2a1 <??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z+0x2a1>
+ 2a1:	89 85 b4 fe ff ff    	mov    %eax,-0x14c(%ebp)
+ 2a7:	8b f4                	mov    %esp,%esi
+ 2a9:	8b 45 dc             	mov    -0x24(%ebp),%eax
+ 2ac:	50                   	push   %eax
+ 2ad:	8b 4d d8             	mov    -0x28(%ebp),%ecx
+ 2b0:	51                   	push   %ecx
+ 2b1:	8b 55 0c             	mov    0xc(%ebp),%edx
+ 2b4:	52                   	push   %edx
+ 2b5:	8b 8d b4 fe ff ff    	mov    -0x14c(%ebp),%ecx
+ 2bb:	ff 15 00 00 00 00    	call   *0x0
+ 2c1:	3b f4                	cmp    %esp,%esi
+ 2c3:	e8 00 00 00 00       	call   2c8 <??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z+0x2c8>
+ 2c8:	89 85 ac fe ff ff    	mov    %eax,-0x154(%ebp)
+ 2ce:	89 95 b0 fe ff ff    	mov    %edx,-0x150(%ebp)
+ 2d4:	8b 85 ac fe ff ff    	mov    -0x154(%ebp),%eax
+ 2da:	3b 45 d8             	cmp    -0x28(%ebp),%eax
+ 2dd:	75 0b                	jne    2ea <??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z+0x2ea>
+ 2df:	8b 8d b0 fe ff ff    	mov    -0x150(%ebp),%ecx
+ 2e5:	3b 4d dc             	cmp    -0x24(%ebp),%ecx
+ 2e8:	74 09                	je     2f3 <??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z+0x2f3>
+ 2ea:	8b 45 e8             	mov    -0x18(%ebp),%eax
+ 2ed:	83 c8 04             	or     $0x4,%eax
+ 2f0:	89 45 e8             	mov    %eax,-0x18(%ebp)
+ 2f3:	83 7d e8 00          	cmpl   $0x0,-0x18(%ebp)
+ 2f7:	0f 85 eb 00 00 00    	jne    3e8 <??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z+0x3e8>
+ 2fd:	eb 12                	jmp    311 <??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z+0x311>
+ 2ff:	8b 45 c8             	mov    -0x38(%ebp),%eax
+ 302:	83 e8 01             	sub    $0x1,%eax
+ 305:	8b 4d cc             	mov    -0x34(%ebp),%ecx
+ 308:	83 d9 00             	sbb    $0x0,%ecx
+ 30b:	89 45 c8             	mov    %eax,-0x38(%ebp)
+ 30e:	89 4d cc             	mov    %ecx,-0x34(%ebp)
+ 311:	83 7d cc 00          	cmpl   $0x0,-0x34(%ebp)
+ 315:	0f 8c cd 00 00 00    	jl     3e8 <??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z+0x3e8>
+ 31b:	7f 0a                	jg     327 <??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z+0x327>
+ 31d:	83 7d c8 00          	cmpl   $0x0,-0x38(%ebp)
+ 321:	0f 86 c1 00 00 00    	jbe    3e8 <??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z+0x3e8>
+ 327:	8b 45 08             	mov    0x8(%ebp),%eax
+ 32a:	8b 08                	mov    (%eax),%ecx
+ 32c:	8b 55 08             	mov    0x8(%ebp),%edx
+ 32f:	03 51 04             	add    0x4(%ecx),%edx
+ 332:	8b f4                	mov    %esp,%esi
+ 334:	8b ca                	mov    %edx,%ecx
+ 336:	ff 15 00 00 00 00    	call   *0x0
+ 33c:	3b f4                	cmp    %esp,%esi
+ 33e:	e8 00 00 00 00       	call   343 <??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z+0x343>
+ 343:	88 85 b7 fe ff ff    	mov    %al,-0x149(%ebp)
+ 349:	8b 45 08             	mov    0x8(%ebp),%eax
+ 34c:	8b 08                	mov    (%eax),%ecx
+ 34e:	8b 55 08             	mov    0x8(%ebp),%edx
+ 351:	03 51 04             	add    0x4(%ecx),%edx
+ 354:	8b f4                	mov    %esp,%esi
+ 356:	8b ca                	mov    %edx,%ecx
+ 358:	ff 15 00 00 00 00    	call   *0x0
+ 35e:	3b f4                	cmp    %esp,%esi
+ 360:	e8 00 00 00 00       	call   365 <??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z+0x365>
+ 365:	89 85 b0 fe ff ff    	mov    %eax,-0x150(%ebp)
+ 36b:	8b f4                	mov    %esp,%esi
+ 36d:	0f b6 85 b7 fe ff ff 	movzbl -0x149(%ebp),%eax
+ 374:	50                   	push   %eax
+ 375:	8b 8d b0 fe ff ff    	mov    -0x150(%ebp),%ecx
+ 37b:	ff 15 00 00 00 00    	call   *0x0
+ 381:	3b f4                	cmp    %esp,%esi
+ 383:	e8 00 00 00 00       	call   388 <??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z+0x388>
+ 388:	89 85 ac fe ff ff    	mov    %eax,-0x154(%ebp)
+ 38e:	8b 8d ac fe ff ff    	mov    -0x154(%ebp),%ecx
+ 394:	89 8d d4 fe ff ff    	mov    %ecx,-0x12c(%ebp)
+ 39a:	e8 00 00 00 00       	call   39f <??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z+0x39f>
+ 39f:	89 85 a8 fe ff ff    	mov    %eax,-0x158(%ebp)
+ 3a5:	8b 95 a8 fe ff ff    	mov    -0x158(%ebp),%edx
+ 3ab:	89 95 e0 fe ff ff    	mov    %edx,-0x120(%ebp)
+ 3b1:	8d 85 d4 fe ff ff    	lea    -0x12c(%ebp),%eax
+ 3b7:	50                   	push   %eax
+ 3b8:	8d 8d e0 fe ff ff    	lea    -0x120(%ebp),%ecx
+ 3be:	51                   	push   %ecx
+ 3bf:	e8 00 00 00 00       	call   3c4 <??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z+0x3c4>
+ 3c4:	83 c4 08             	add    $0x8,%esp
+ 3c7:	88 85 a7 fe ff ff    	mov    %al,-0x159(%ebp)
+ 3cd:	0f b6 95 a7 fe ff ff 	movzbl -0x159(%ebp),%edx
+ 3d4:	85 d2                	test   %edx,%edx
+ 3d6:	74 0b                	je     3e3 <??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z+0x3e3>
+ 3d8:	8b 45 e8             	mov    -0x18(%ebp),%eax
+ 3db:	83 c8 04             	or     $0x4,%eax
+ 3de:	89 45 e8             	mov    %eax,-0x18(%ebp)
+ 3e1:	eb 05                	jmp    3e8 <??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z+0x3e8>
+ 3e3:	e9 17 ff ff ff       	jmp    2ff <??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z+0x2ff>
+ 3e8:	8b f4                	mov    %esp,%esi
+ 3ea:	6a 00                	push   $0x0
+ 3ec:	6a 00                	push   $0x0
+ 3ee:	8b 45 08             	mov    0x8(%ebp),%eax
+ 3f1:	8b 08                	mov    (%eax),%ecx
+ 3f3:	8b 55 08             	mov    0x8(%ebp),%edx
+ 3f6:	03 51 04             	add    0x4(%ecx),%edx
+ 3f9:	8b ca                	mov    %edx,%ecx
+ 3fb:	ff 15 00 00 00 00    	call   *0x0
+ 401:	3b f4                	cmp    %esp,%esi
+ 403:	e8 00 00 00 00       	call   408 <??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z+0x408>
+ 408:	eb 2d                	jmp    437 <__catch$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z$0+0x2d>
+
+0000040a <__catch$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z$0>:
+ 40a:	8b f4                	mov    %esp,%esi
+ 40c:	6a 01                	push   $0x1
+ 40e:	6a 04                	push   $0x4
+ 410:	8b 45 08             	mov    0x8(%ebp),%eax
+ 413:	8b 08                	mov    (%eax),%ecx
+ 415:	8b 55 08             	mov    0x8(%ebp),%edx
+ 418:	03 51 04             	add    0x4(%ecx),%edx
+ 41b:	8b ca                	mov    %edx,%ecx
+ 41d:	ff 15 00 00 00 00    	call   *0x0
+ 423:	3b f4                	cmp    %esp,%esi
+ 425:	e8 00 00 00 00       	call   42a <__catch$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z$0+0x20>
+ 42a:	c7 45 fc 00 00 00 00 	movl   $0x0,-0x4(%ebp)
+ 431:	b8 00 00 00 00       	mov    $0x0,%eax
+ 436:	c3                   	ret    
+ 437:	c7 45 fc 00 00 00 00 	movl   $0x0,-0x4(%ebp)
+
+0000043e <$LN13>:
+ 43e:	8b f4                	mov    %esp,%esi
+ 440:	6a 00                	push   $0x0
+ 442:	8b 45 e8             	mov    -0x18(%ebp),%eax
+ 445:	50                   	push   %eax
+ 446:	8b 4d 08             	mov    0x8(%ebp),%ecx
+ 449:	8b 11                	mov    (%ecx),%edx
+ 44b:	8b 4d 08             	mov    0x8(%ebp),%ecx
+ 44e:	03 4a 04             	add    0x4(%edx),%ecx
+ 451:	ff 15 00 00 00 00    	call   *0x0
+ 457:	3b f4                	cmp    %esp,%esi
+ 459:	e8 00 00 00 00       	call   45e <$LN13+0x20>
+ 45e:	8b 45 08             	mov    0x8(%ebp),%eax
+ 461:	89 85 ec fe ff ff    	mov    %eax,-0x114(%ebp)
+ 467:	c7 45 fc ff ff ff ff 	movl   $0xffffffff,-0x4(%ebp)
+ 46e:	8d 4d b8             	lea    -0x48(%ebp),%ecx
+ 471:	e8 00 00 00 00       	call   476 <$LN13+0x38>
+ 476:	8b 85 ec fe ff ff    	mov    -0x114(%ebp),%eax
+ 47c:	52                   	push   %edx
+ 47d:	8b cd                	mov    %ebp,%ecx
+ 47f:	50                   	push   %eax
+ 480:	8d 15 00 00 00 00    	lea    0x0,%edx
+ 486:	e8 00 00 00 00       	call   48b <$LN13+0x4d>
+ 48b:	58                   	pop    %eax
+ 48c:	5a                   	pop    %edx
+ 48d:	8b 4d f4             	mov    -0xc(%ebp),%ecx
+ 490:	64 89 0d 00 00 00 00 	mov    %ecx,%fs:0x0
+ 497:	59                   	pop    %ecx
+ 498:	5f                   	pop    %edi
+ 499:	5e                   	pop    %esi
+ 49a:	5b                   	pop    %ebx
+ 49b:	81 c4 60 01 00 00    	add    $0x160,%esp
+ 4a1:	3b ec                	cmp    %esp,%ebp
+ 4a3:	e8 00 00 00 00       	call   4a8 <$LN13+0x6a>
+ 4a8:	8b e5                	mov    %ebp,%esp
+ 4aa:	5d                   	pop    %ebp
+ 4ab:	c3                   	ret    
+
+000004ac <$LN33>:
+ 4ac:	01 00                	add    %eax,(%eax)
+ 4ae:	00 00                	add    %al,(%eax)
+ 4b0:	00 00                	add    %al,(%eax)
+	...
+
+000004b4 <$LN32>:
+ 4b4:	b8 ff ff ff 08       	mov    $0x8ffffff,%eax
+ 4b9:	00 00                	add    %al,(%eax)
+ 4bb:	00 00                	add    %al,(%eax)
+ 4bd:	00 00                	add    %al,(%eax)
+	...
+
+000004c0 <$LN30>:
+ 4c0:	5f                   	pop    %edi
+ 4c1:	4f                   	dec    %edi
+ 4c2:	6b                   	.byte 0x6b
+	...
+
+Disassembly of section .text$x:
+
+00000000 <__unwindfunclet$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z$2>:
+   0:	8d 4d b8             	lea    -0x48(%ebp),%ecx
+   3:	e9 00 00 00 00       	jmp    8 <__ehhandler$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z>
+
+00000008 <__ehhandler$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z>:
+   8:	8b 54 24 08          	mov    0x8(%esp),%edx
+   c:	8d 42 0c             	lea    0xc(%edx),%eax
+   f:	8b 8a 9c fe ff ff    	mov    -0x164(%edx),%ecx
+  15:	33 c8                	xor    %eax,%ecx
+  17:	e8 00 00 00 00       	call   1c <__ehhandler$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z+0x14>
+  1c:	b8 00 00 00 00       	mov    $0x0,%eax
+  21:	e9 00 00 00 00       	jmp    26 <__unwindtable$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z+0x2>
+
+Disassembly of section .text:
+
+00000000 <?length@?$char_traits@D@std@@SAIPBD@Z>:
+   0:	55                   	push   %ebp
+   1:	8b ec                	mov    %esp,%ebp
+   3:	81 ec c0 00 00 00    	sub    $0xc0,%esp
+   9:	53                   	push   %ebx
+   a:	56                   	push   %esi
+   b:	57                   	push   %edi
+   c:	8d bd 40 ff ff ff    	lea    -0xc0(%ebp),%edi
+  12:	b9 30 00 00 00       	mov    $0x30,%ecx
+  17:	b8 cc cc cc cc       	mov    $0xcccccccc,%eax
+  1c:	f3 ab                	rep stos %eax,%es:(%edi)
+  1e:	8b 45 08             	mov    0x8(%ebp),%eax
+  21:	50                   	push   %eax
+  22:	e8 00 00 00 00       	call   27 <?length@?$char_traits@D@std@@SAIPBD@Z+0x27>
+  27:	83 c4 04             	add    $0x4,%esp
+  2a:	5f                   	pop    %edi
+  2b:	5e                   	pop    %esi
+  2c:	5b                   	pop    %ebx
+  2d:	81 c4 c0 00 00 00    	add    $0xc0,%esp
+  33:	3b ec                	cmp    %esp,%ebp
+  35:	e8 00 00 00 00       	call   3a <?length@?$char_traits@D@std@@SAIPBD@Z+0x3a>
+  3a:	8b e5                	mov    %ebp,%esp
+  3c:	5d                   	pop    %ebp
+  3d:	c3                   	ret    
+
+Disassembly of section .text:
+
+00000000 <?eq_int_type@?$char_traits@D@std@@SA_NABH0@Z>:
+   0:	55                   	push   %ebp
+   1:	8b ec                	mov    %esp,%ebp
+   3:	81 ec c0 00 00 00    	sub    $0xc0,%esp
+   9:	53                   	push   %ebx
+   a:	56                   	push   %esi
+   b:	57                   	push   %edi
+   c:	8d bd 40 ff ff ff    	lea    -0xc0(%ebp),%edi
+  12:	b9 30 00 00 00       	mov    $0x30,%ecx
+  17:	b8 cc cc cc cc       	mov    $0xcccccccc,%eax
+  1c:	f3 ab                	rep stos %eax,%es:(%edi)
+  1e:	8b 45 08             	mov    0x8(%ebp),%eax
+  21:	8b 4d 0c             	mov    0xc(%ebp),%ecx
+  24:	8b 10                	mov    (%eax),%edx
+  26:	33 c0                	xor    %eax,%eax
+  28:	3b 11                	cmp    (%ecx),%edx
+  2a:	0f 94 c0             	sete   %al
+  2d:	5f                   	pop    %edi
+  2e:	5e                   	pop    %esi
+  2f:	5b                   	pop    %ebx
+  30:	8b e5                	mov    %ebp,%esp
+  32:	5d                   	pop    %ebp
+  33:	c3                   	ret    
+
+Disassembly of section .text:
+
+00000000 <?eof@?$char_traits@D@std@@SAHXZ>:
+   0:	55                   	push   %ebp
+   1:	8b ec                	mov    %esp,%ebp
+   3:	81 ec c0 00 00 00    	sub    $0xc0,%esp
+   9:	53                   	push   %ebx
+   a:	56                   	push   %esi
+   b:	57                   	push   %edi
+   c:	8d bd 40 ff ff ff    	lea    -0xc0(%ebp),%edi
+  12:	b9 30 00 00 00       	mov    $0x30,%ecx
+  17:	b8 cc cc cc cc       	mov    $0xcccccccc,%eax
+  1c:	f3 ab                	rep stos %eax,%es:(%edi)
+  1e:	83 c8 ff             	or     $0xffffffff,%eax
+  21:	5f                   	pop    %edi
+  22:	5e                   	pop    %esi
+  23:	5b                   	pop    %ebx
+  24:	8b e5                	mov    %ebp,%esp
+  26:	5d                   	pop    %ebp
+  27:	c3                   	ret    
+
+Disassembly of section .text:
+
+00000000 <??0sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@AAV12@@Z>:
+   0:	55                   	push   %ebp
+   1:	8b ec                	mov    %esp,%ebp
+   3:	6a ff                	push   $0xffffffff
+   5:	68 00 00 00 00       	push   $0x0
+   a:	64 a1 00 00 00 00    	mov    %fs:0x0,%eax
+  10:	50                   	push   %eax
+  11:	81 ec cc 00 00 00    	sub    $0xcc,%esp
+  17:	53                   	push   %ebx
+  18:	56                   	push   %esi
+  19:	57                   	push   %edi
+  1a:	51                   	push   %ecx
+  1b:	8d bd 28 ff ff ff    	lea    -0xd8(%ebp),%edi
+  21:	b9 33 00 00 00       	mov    $0x33,%ecx
+  26:	b8 cc cc cc cc       	mov    $0xcccccccc,%eax
+  2b:	f3 ab                	rep stos %eax,%es:(%edi)
+  2d:	59                   	pop    %ecx
+  2e:	a1 00 00 00 00       	mov    0x0,%eax
+  33:	33 c5                	xor    %ebp,%eax
+  35:	50                   	push   %eax
+  36:	8d 45 f4             	lea    -0xc(%ebp),%eax
+  39:	64 a3 00 00 00 00    	mov    %eax,%fs:0x0
+  3f:	89 4d ec             	mov    %ecx,-0x14(%ebp)
+  42:	8b 45 08             	mov    0x8(%ebp),%eax
+  45:	50                   	push   %eax
+  46:	8b 4d ec             	mov    -0x14(%ebp),%ecx
+  49:	e8 00 00 00 00       	call   4e <??0sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@AAV12@@Z+0x4e>
+  4e:	c7 45 fc 00 00 00 00 	movl   $0x0,-0x4(%ebp)
+  55:	8b 45 08             	mov    0x8(%ebp),%eax
+  58:	8b 08                	mov    (%eax),%ecx
+  5a:	8b 55 08             	mov    0x8(%ebp),%edx
+  5d:	03 51 04             	add    0x4(%ecx),%edx
+  60:	8b f4                	mov    %esp,%esi
+  62:	8b ca                	mov    %edx,%ecx
+  64:	ff 15 00 00 00 00    	call   *0x0
+  6a:	3b f4                	cmp    %esp,%esi
+  6c:	e8 00 00 00 00       	call   71 <??0sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@AAV12@@Z+0x71>
+  71:	0f b6 c0             	movzbl %al,%eax
+  74:	85 c0                	test   %eax,%eax
+  76:	74 4d                	je     c5 <??0sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@AAV12@@Z+0xc5>
+  78:	8b 45 08             	mov    0x8(%ebp),%eax
+  7b:	8b 08                	mov    (%eax),%ecx
+  7d:	8b 55 08             	mov    0x8(%ebp),%edx
+  80:	03 51 04             	add    0x4(%ecx),%edx
+  83:	8b f4                	mov    %esp,%esi
+  85:	8b ca                	mov    %edx,%ecx
+  87:	ff 15 00 00 00 00    	call   *0x0
+  8d:	3b f4                	cmp    %esp,%esi
+  8f:	e8 00 00 00 00       	call   94 <??0sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@AAV12@@Z+0x94>
+  94:	85 c0                	test   %eax,%eax
+  96:	74 2d                	je     c5 <??0sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@AAV12@@Z+0xc5>
+  98:	8b 45 08             	mov    0x8(%ebp),%eax
+  9b:	8b 08                	mov    (%eax),%ecx
+  9d:	8b 55 08             	mov    0x8(%ebp),%edx
+  a0:	03 51 04             	add    0x4(%ecx),%edx
+  a3:	8b f4                	mov    %esp,%esi
+  a5:	8b ca                	mov    %edx,%ecx
+  a7:	ff 15 00 00 00 00    	call   *0x0
+  ad:	3b f4                	cmp    %esp,%esi
+  af:	e8 00 00 00 00       	call   b4 <??0sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@AAV12@@Z+0xb4>
+  b4:	8b f4                	mov    %esp,%esi
+  b6:	8b c8                	mov    %eax,%ecx
+  b8:	ff 15 00 00 00 00    	call   *0x0
+  be:	3b f4                	cmp    %esp,%esi
+  c0:	e8 00 00 00 00       	call   c5 <??0sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@AAV12@@Z+0xc5>
+  c5:	8b 45 08             	mov    0x8(%ebp),%eax
+  c8:	8b 08                	mov    (%eax),%ecx
+  ca:	8b 55 08             	mov    0x8(%ebp),%edx
+  cd:	03 51 04             	add    0x4(%ecx),%edx
+  d0:	8b f4                	mov    %esp,%esi
+  d2:	8b ca                	mov    %edx,%ecx
+  d4:	ff 15 00 00 00 00    	call   *0x0
+  da:	3b f4                	cmp    %esp,%esi
+  dc:	e8 00 00 00 00       	call   e1 <??0sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@AAV12@@Z+0xe1>
+  e1:	8b 4d ec             	mov    -0x14(%ebp),%ecx
+  e4:	88 41 04             	mov    %al,0x4(%ecx)
+  e7:	c7 45 fc ff ff ff ff 	movl   $0xffffffff,-0x4(%ebp)
+  ee:	8b 45 ec             	mov    -0x14(%ebp),%eax
+  f1:	8b 4d f4             	mov    -0xc(%ebp),%ecx
+  f4:	64 89 0d 00 00 00 00 	mov    %ecx,%fs:0x0
+  fb:	59                   	pop    %ecx
+  fc:	5f                   	pop    %edi
+  fd:	5e                   	pop    %esi
+  fe:	5b                   	pop    %ebx
+  ff:	81 c4 d8 00 00 00    	add    $0xd8,%esp
+ 105:	3b ec                	cmp    %esp,%ebp
+ 107:	e8 00 00 00 00       	call   10c <??0sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@AAV12@@Z+0x10c>
+ 10c:	8b e5                	mov    %ebp,%esp
+ 10e:	5d                   	pop    %ebp
+ 10f:	c2 04 00             	ret    $0x4
+
+Disassembly of section .text$x:
+
+00000000 <__unwindfunclet$??0sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@AAV12@@Z$0>:
+   0:	8b 4d ec             	mov    -0x14(%ebp),%ecx
+   3:	e9 00 00 00 00       	jmp    8 <__ehhandler$??0sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@AAV12@@Z>
+
+00000008 <__ehhandler$??0sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@AAV12@@Z>:
+   8:	8b 54 24 08          	mov    0x8(%esp),%edx
+   c:	8d 42 0c             	lea    0xc(%edx),%eax
+   f:	8b 8a 24 ff ff ff    	mov    -0xdc(%edx),%ecx
+  15:	33 c8                	xor    %eax,%ecx
+  17:	e8 00 00 00 00       	call   1c <__ehhandler$??0sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@AAV12@@Z+0x14>
+  1c:	b8 00 00 00 00       	mov    $0x0,%eax
+  21:	e9 00 00 00 00       	jmp    26 <__unwindtable$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z+0x2>
+
+Disassembly of section .text:
+
+00000000 <??1sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@XZ>:
+   0:	55                   	push   %ebp
+   1:	8b ec                	mov    %esp,%ebp
+   3:	6a ff                	push   $0xffffffff
+   5:	68 00 00 00 00       	push   $0x0
+   a:	64 a1 00 00 00 00    	mov    %fs:0x0,%eax
+  10:	50                   	push   %eax
+  11:	81 ec cc 00 00 00    	sub    $0xcc,%esp
+  17:	53                   	push   %ebx
+  18:	56                   	push   %esi
+  19:	57                   	push   %edi
+  1a:	51                   	push   %ecx
+  1b:	8d bd 28 ff ff ff    	lea    -0xd8(%ebp),%edi
+  21:	b9 33 00 00 00       	mov    $0x33,%ecx
+  26:	b8 cc cc cc cc       	mov    $0xcccccccc,%eax
+  2b:	f3 ab                	rep stos %eax,%es:(%edi)
+  2d:	59                   	pop    %ecx
+  2e:	a1 00 00 00 00       	mov    0x0,%eax
+  33:	33 c5                	xor    %ebp,%eax
+  35:	50                   	push   %eax
+  36:	8d 45 f4             	lea    -0xc(%ebp),%eax
+  39:	64 a3 00 00 00 00    	mov    %eax,%fs:0x0
+  3f:	89 4d ec             	mov    %ecx,-0x14(%ebp)
+  42:	c7 45 fc 00 00 00 00 	movl   $0x0,-0x4(%ebp)
+  49:	8b f4                	mov    %esp,%esi
+  4b:	ff 15 00 00 00 00    	call   *0x0
+  51:	3b f4                	cmp    %esp,%esi
+  53:	e8 00 00 00 00       	call   58 <??1sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@XZ+0x58>
+  58:	0f b6 c0             	movzbl %al,%eax
+  5b:	85 c0                	test   %eax,%eax
+  5d:	75 14                	jne    73 <??1sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@XZ+0x73>
+  5f:	8b f4                	mov    %esp,%esi
+  61:	8b 45 ec             	mov    -0x14(%ebp),%eax
+  64:	8b 08                	mov    (%eax),%ecx
+  66:	ff 15 00 00 00 00    	call   *0x0
+  6c:	3b f4                	cmp    %esp,%esi
+  6e:	e8 00 00 00 00       	call   73 <??1sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@XZ+0x73>
+  73:	c7 45 fc ff ff ff ff 	movl   $0xffffffff,-0x4(%ebp)
+  7a:	8b 4d ec             	mov    -0x14(%ebp),%ecx
+  7d:	e8 00 00 00 00       	call   82 <??1sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@XZ+0x82>
+  82:	8b 4d f4             	mov    -0xc(%ebp),%ecx
+  85:	64 89 0d 00 00 00 00 	mov    %ecx,%fs:0x0
+  8c:	59                   	pop    %ecx
+  8d:	5f                   	pop    %edi
+  8e:	5e                   	pop    %esi
+  8f:	5b                   	pop    %ebx
+  90:	81 c4 d8 00 00 00    	add    $0xd8,%esp
+  96:	3b ec                	cmp    %esp,%ebp
+  98:	e8 00 00 00 00       	call   9d <??1sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@XZ+0x9d>
+  9d:	8b e5                	mov    %ebp,%esp
+  9f:	5d                   	pop    %ebp
+  a0:	c3                   	ret    
+
+Disassembly of section .text$x:
+
+00000000 <__unwindfunclet$??1sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@XZ$0>:
+   0:	8b 4d ec             	mov    -0x14(%ebp),%ecx
+   3:	e9 00 00 00 00       	jmp    8 <__ehhandler$??1sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@XZ>
+
+00000008 <__ehhandler$??1sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@XZ>:
+   8:	8b 54 24 08          	mov    0x8(%esp),%edx
+   c:	8d 42 0c             	lea    0xc(%edx),%eax
+   f:	8b 8a 24 ff ff ff    	mov    -0xdc(%edx),%ecx
+  15:	33 c8                	xor    %eax,%ecx
+  17:	e8 00 00 00 00       	call   1c <__ehhandler$??1sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@XZ+0x14>
+  1c:	b8 00 00 00 00       	mov    $0x0,%eax
+  21:	e9 00 00 00 00       	jmp    26 <__unwindtable$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z+0x2>
+
+Disassembly of section .text:
+
+00000000 <??Bsentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QBEPQ_Bool_struct@2@HXZ>:
+   0:	55                   	push   %ebp
+   1:	8b ec                	mov    %esp,%ebp
+   3:	81 ec cc 00 00 00    	sub    $0xcc,%esp
+   9:	53                   	push   %ebx
+   a:	56                   	push   %esi
+   b:	57                   	push   %edi
+   c:	51                   	push   %ecx
+   d:	8d bd 34 ff ff ff    	lea    -0xcc(%ebp),%edi
+  13:	b9 33 00 00 00       	mov    $0x33,%ecx
+  18:	b8 cc cc cc cc       	mov    $0xcccccccc,%eax
+  1d:	f3 ab                	rep stos %eax,%es:(%edi)
+  1f:	59                   	pop    %ecx
+  20:	89 4d f8             	mov    %ecx,-0x8(%ebp)
+  23:	8b 45 f8             	mov    -0x8(%ebp),%eax
+  26:	0f b6 40 04          	movzbl 0x4(%eax),%eax
+  2a:	f7 d8                	neg    %eax
+  2c:	1b c0                	sbb    %eax,%eax
+  2e:	f7 d8                	neg    %eax
+  30:	83 e8 01             	sub    $0x1,%eax
+  33:	5f                   	pop    %edi
+  34:	5e                   	pop    %esi
+  35:	5b                   	pop    %ebx
+  36:	8b e5                	mov    %ebp,%esp
+  38:	5d                   	pop    %ebp
+  39:	c3                   	ret    
+
+Disassembly of section .text:
+
+00000000 <??0_Sentry_base@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@AAV12@@Z>:
+   0:	55                   	push   %ebp
+   1:	8b ec                	mov    %esp,%ebp
+   3:	81 ec d0 00 00 00    	sub    $0xd0,%esp
+   9:	53                   	push   %ebx
+   a:	56                   	push   %esi
+   b:	57                   	push   %edi
+   c:	51                   	push   %ecx
+   d:	8d bd 30 ff ff ff    	lea    -0xd0(%ebp),%edi
+  13:	b9 34 00 00 00       	mov    $0x34,%ecx
+  18:	b8 cc cc cc cc       	mov    $0xcccccccc,%eax
+  1d:	f3 ab                	rep stos %eax,%es:(%edi)
+  1f:	59                   	pop    %ecx
+  20:	89 4d f8             	mov    %ecx,-0x8(%ebp)
+  23:	8b 45 f8             	mov    -0x8(%ebp),%eax
+  26:	8b 4d 08             	mov    0x8(%ebp),%ecx
+  29:	89 08                	mov    %ecx,(%eax)
+  2b:	8b 45 f8             	mov    -0x8(%ebp),%eax
+  2e:	8b 08                	mov    (%eax),%ecx
+  30:	8b 11                	mov    (%ecx),%edx
+  32:	8b 45 f8             	mov    -0x8(%ebp),%eax
+  35:	8b 08                	mov    (%eax),%ecx
+  37:	03 4a 04             	add    0x4(%edx),%ecx
+  3a:	8b f4                	mov    %esp,%esi
+  3c:	ff 15 00 00 00 00    	call   *0x0
+  42:	3b f4                	cmp    %esp,%esi
+  44:	e8 00 00 00 00       	call   49 <??0_Sentry_base@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@AAV12@@Z+0x49>
+  49:	85 c0                	test   %eax,%eax
+  4b:	74 40                	je     8d <??0_Sentry_base@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@AAV12@@Z+0x8d>
+  4d:	8b 45 f8             	mov    -0x8(%ebp),%eax
+  50:	8b 08                	mov    (%eax),%ecx
+  52:	8b 11                	mov    (%ecx),%edx
+  54:	8b 45 f8             	mov    -0x8(%ebp),%eax
+  57:	8b 08                	mov    (%eax),%ecx
+  59:	03 4a 04             	add    0x4(%edx),%ecx
+  5c:	8b f4                	mov    %esp,%esi
+  5e:	ff 15 00 00 00 00    	call   *0x0
+  64:	3b f4                	cmp    %esp,%esi
+  66:	e8 00 00 00 00       	call   6b <??0_Sentry_base@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@AAV12@@Z+0x6b>
+  6b:	89 85 30 ff ff ff    	mov    %eax,-0xd0(%ebp)
+  71:	8b 8d 30 ff ff ff    	mov    -0xd0(%ebp),%ecx
+  77:	8b 11                	mov    (%ecx),%edx
+  79:	8b f4                	mov    %esp,%esi
+  7b:	8b 8d 30 ff ff ff    	mov    -0xd0(%ebp),%ecx
+  81:	8b 42 04             	mov    0x4(%edx),%eax
+  84:	ff d0                	call   *%eax
+  86:	3b f4                	cmp    %esp,%esi
+  88:	e8 00 00 00 00       	call   8d <??0_Sentry_base@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@AAV12@@Z+0x8d>
+  8d:	8b 45 f8             	mov    -0x8(%ebp),%eax
+  90:	5f                   	pop    %edi
+  91:	5e                   	pop    %esi
+  92:	5b                   	pop    %ebx
+  93:	81 c4 d0 00 00 00    	add    $0xd0,%esp
+  99:	3b ec                	cmp    %esp,%ebp
+  9b:	e8 00 00 00 00       	call   a0 <??0_Sentry_base@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@AAV12@@Z+0xa0>
+  a0:	8b e5                	mov    %ebp,%esp
+  a2:	5d                   	pop    %ebp
+  a3:	c2 04 00             	ret    $0x4
+
+Disassembly of section .text:
+
+00000000 <??1_Sentry_base@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@XZ>:
+   0:	55                   	push   %ebp
+   1:	8b ec                	mov    %esp,%ebp
+   3:	81 ec d0 00 00 00    	sub    $0xd0,%esp
+   9:	53                   	push   %ebx
+   a:	56                   	push   %esi
+   b:	57                   	push   %edi
+   c:	51                   	push   %ecx
+   d:	8d bd 30 ff ff ff    	lea    -0xd0(%ebp),%edi
+  13:	b9 34 00 00 00       	mov    $0x34,%ecx
+  18:	b8 cc cc cc cc       	mov    $0xcccccccc,%eax
+  1d:	f3 ab                	rep stos %eax,%es:(%edi)
+  1f:	59                   	pop    %ecx
+  20:	89 4d f8             	mov    %ecx,-0x8(%ebp)
+  23:	8b 45 f8             	mov    -0x8(%ebp),%eax
+  26:	8b 08                	mov    (%eax),%ecx
+  28:	8b 11                	mov    (%ecx),%edx
+  2a:	8b 45 f8             	mov    -0x8(%ebp),%eax
+  2d:	8b 08                	mov    (%eax),%ecx
+  2f:	03 4a 04             	add    0x4(%edx),%ecx
+  32:	8b f4                	mov    %esp,%esi
+  34:	ff 15 00 00 00 00    	call   *0x0
+  3a:	3b f4                	cmp    %esp,%esi
+  3c:	e8 00 00 00 00       	call   41 <??1_Sentry_base@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@XZ+0x41>
+  41:	85 c0                	test   %eax,%eax
+  43:	74 40                	je     85 <??1_Sentry_base@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@XZ+0x85>
+  45:	8b 45 f8             	mov    -0x8(%ebp),%eax
+  48:	8b 08                	mov    (%eax),%ecx
+  4a:	8b 11                	mov    (%ecx),%edx
+  4c:	8b 45 f8             	mov    -0x8(%ebp),%eax
+  4f:	8b 08                	mov    (%eax),%ecx
+  51:	03 4a 04             	add    0x4(%edx),%ecx
+  54:	8b f4                	mov    %esp,%esi
+  56:	ff 15 00 00 00 00    	call   *0x0
+  5c:	3b f4                	cmp    %esp,%esi
+  5e:	e8 00 00 00 00       	call   63 <??1_Sentry_base@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@XZ+0x63>
+  63:	89 85 30 ff ff ff    	mov    %eax,-0xd0(%ebp)
+  69:	8b 8d 30 ff ff ff    	mov    -0xd0(%ebp),%ecx
+  6f:	8b 11                	mov    (%ecx),%edx
+  71:	8b f4                	mov    %esp,%esi
+  73:	8b 8d 30 ff ff ff    	mov    -0xd0(%ebp),%ecx
+  79:	8b 42 08             	mov    0x8(%edx),%eax
+  7c:	ff d0                	call   *%eax
+  7e:	3b f4                	cmp    %esp,%esi
+  80:	e8 00 00 00 00       	call   85 <??1_Sentry_base@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@XZ+0x85>
+  85:	5f                   	pop    %edi
+  86:	5e                   	pop    %esi
+  87:	5b                   	pop    %ebx
+  88:	81 c4 d0 00 00 00    	add    $0xd0,%esp
+  8e:	3b ec                	cmp    %esp,%ebp
+  90:	e8 00 00 00 00       	call   95 <??1_Sentry_base@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@XZ+0x95>
+  95:	8b e5                	mov    %ebp,%esp
+  97:	5d                   	pop    %ebp
+  98:	c3                   	ret    
