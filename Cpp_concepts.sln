@@ -93,6 +93,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ArrayMemory", "ArrayMemory\
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DefaultArg", "DefaultArg\DefaultArg.vcxproj", "{0D940BBC-D430-4A1B-BB29-9BB9F48AC834}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PragmaPack", "PragmaPack\PragmaPack.vcxproj", "{31D87989-6520-4906-A41A-A81BB09C3084}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -439,6 +441,14 @@ Global
 		{0D940BBC-D430-4A1B-BB29-9BB9F48AC834}.Release|Win32.Build.0 = Release|Win32
 		{0D940BBC-D430-4A1B-BB29-9BB9F48AC834}.Release|x64.ActiveCfg = Release|x64
 		{0D940BBC-D430-4A1B-BB29-9BB9F48AC834}.Release|x64.Build.0 = Release|x64
+		{31D87989-6520-4906-A41A-A81BB09C3084}.Debug|Win32.ActiveCfg = Debug|Win32
+		{31D87989-6520-4906-A41A-A81BB09C3084}.Debug|Win32.Build.0 = Debug|Win32
+		{31D87989-6520-4906-A41A-A81BB09C3084}.Debug|x64.ActiveCfg = Debug|x64
+		{31D87989-6520-4906-A41A-A81BB09C3084}.Debug|x64.Build.0 = Debug|x64
+		{31D87989-6520-4906-A41A-A81BB09C3084}.Release|Win32.ActiveCfg = Release|Win32
+		{31D87989-6520-4906-A41A-A81BB09C3084}.Release|Win32.Build.0 = Release|Win32
+		{31D87989-6520-4906-A41A-A81BB09C3084}.Release|x64.ActiveCfg = Release|x64
+		{31D87989-6520-4906-A41A-A81BB09C3084}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
