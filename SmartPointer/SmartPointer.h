@@ -5,7 +5,8 @@
 #include "iostream"
 #include "RefCount.h"
 
-template <typename T> class CSmartPointer
+template <typename T> 
+class CSmartPointer
 {
 private:
 	T*			__rect;
@@ -69,4 +70,4 @@ public:
 	}
 
 };
-#endif
+#endif //__SMART_POINTER_H__

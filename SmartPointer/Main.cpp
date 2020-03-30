@@ -24,6 +24,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	CRect *rect = new CRect(10, 12);
 	rect->Display();
 
+	std::cin.get();
 	return 0;
 }
-
