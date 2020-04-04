@@ -11,7 +11,7 @@ public:
 	{}
 };
 
-int _tmain()
+int main()
 {
 	testconst t1;
 	t1.display(30);					// with non const object we can access const member

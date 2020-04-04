@@ -26,8 +26,8 @@ int _tmain(int argc, _TCHAR* argv[])
 	source_file = (TCHAR *) SOURCE_FILE;
 	target_file = (TCHAR *) DEST_FILE;
 	
-	debug ("sourcefile:%s", source_file);
-	debug ("dest_file :%s", target_file);
+	debug ("sourcefile:%ls", source_file);
+	debug ("dest_file :%ls", target_file);
 
 	HRESULT hr;
 	hr = CopyFileW (source_file, target_file, false);
@@ -39,13 +39,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	debug ("File copied successfully");
 
 
-	struct COPYFILE2_EXTENDED_PARAMETERS _copyfile( 
-										sizeof (*COPYFILE2_EXTENDED_PARAMETERS),
-										COPY_FILE_FAIL_IF_EXISTS,
-										TRUE,
-										NULL,
-										NULL
-										);
 
 
 	return 0;
