@@ -7,6 +7,7 @@
 void TokenWord(const char*);
 void TokenName(char*);
 void ReplaceName(const char*);
+void CheckConst();
 
 int main()
 {
@@ -19,8 +20,25 @@ int main()
 	char name1[] = "tally server 9";
 	ReplaceName(name1);
 
+	CheckConst();
+
 	getchar();
 	return 0;
+}
+
+void CheckConst()
+{
+	char const * p1 = "hello";	//p is normal pointer which is pointing to "const char *"
+	const char * p11 = "hello";	// this is same as "char const*"
+	p1 = p11;						// so this is valid;
+
+	const char * const p2 = "hello"; //p1 is const pointer type pointing to "const char *"
+	const char * p21 = "hi";
+//	p2 = p21;						// as p2 is const pointer, it value cal not be changed. compilation error.
+
+	char * const p3 = nullptr;
+	const char* p31 = "hi";
+//	p3 = p31;						// this one will again through error as p3 is a const pointer pointing to char*;
 }
 
 void ReplaceName(const char* name)
