@@ -4,23 +4,29 @@
 // diff bet <string>, "string", "string.h"
 #include <iostream>
 
+
 void TokenWord(const char*);
 void TokenName(char*);
 void ReplaceName(const char*);
 void CheckConst();
+void CheckDelete();
 
 int main()
 {
 	TokenWord("server:data:comp");
 
-	char name[] = "tally server 9";
+	char name[] = "tally server 9";	// here name is a pointer pointing to a const char array or const char*
 	TokenName(name);
 
 //	const char* name1 = "tally server 9";	//using this will through write access violation."
 	char name1[] = "tally server 9";
 	ReplaceName(name1);
+	name1[0] = 't';
 
 	CheckConst();
+	CheckDelete();
+	
+	char *ptr = new char[20];
 
 	getchar();
 	return 0;
@@ -39,6 +45,15 @@ void CheckConst()
 	char * const p3 = nullptr;
 	const char* p31 = "hi";
 //	p3 = p31;						// this one will again through error as p3 is a const pointer pointing to char*;
+}
+
+void CheckDelete()
+{
+	const char * af = "aje";	// here memory is allocated on stack not on heap
+//	delete af;					// so, this line will throw exception
+
+	char *abc = new char[10];
+	delete abc;					// here memory is allocated on heap so followup delete will work
 }
 
 void ReplaceName(const char* name)
